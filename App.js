@@ -22,7 +22,7 @@ title:'Psychic', icon: 'eye', color: '#b743c4', textColor: '#ff9cf7'
 const renderItem = ({ item, index, section }) => {
 
   return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => Alert.alert('Name: ' + item.name + '\nCardNumber: ' + item.num)}>
         <View style={[styles.pokemonContainer, {backgroundColor: section.color}]}>
           <Text style={[styles.pokemonContainerText, {color: section.textColor}]}>{item.name}</Text>
           <Image source={{uri: 'https://dz3we2x72f7ol.cloudfront.net/expansions/151/en-us/SV3pt5_EN_' + item.num + '-2x.png'}}
